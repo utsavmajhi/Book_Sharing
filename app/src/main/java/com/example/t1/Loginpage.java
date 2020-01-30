@@ -1,6 +1,5 @@
 package com.example.t1;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -10,14 +9,13 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.pranavpandey.android.dynamic.toasts.DynamicToast;
+import com.example.t1.RetrofitApis.ApiInterface;
+import com.example.t1.RetrofitApis.RetrofitClient;
 
 import es.dmoral.toasty.Toasty;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 
 public class Loginpage extends AppCompatActivity {
 
@@ -58,7 +56,7 @@ public class Loginpage extends AppCompatActivity {
         else
         {
 
-            ApiInterface apiInterface=RetrofitClient.getClient().create(ApiInterface.class);
+            ApiInterface apiInterface= RetrofitClient.getClient().create(ApiInterface.class);
             sendlgformat lgcred=new sendlgformat(email,pass);
             Call<getlgformat> call=apiInterface.getlogindata(lgcred);
             call.enqueue(new Callback<getlgformat>() {

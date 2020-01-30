@@ -1,4 +1,7 @@
-package com.example.t1;
+package com.example.t1.RetrofitApis;
+
+import com.example.t1.getlgformat;
+import com.example.t1.sendlgformat;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
