@@ -1,9 +1,11 @@
 package com.example.t1;
 
+import androidx.annotation.ColorInt;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -11,6 +13,9 @@ import android.widget.Toast;
 
 import com.example.t1.RetrofitApis.ApiInterface;
 import com.example.t1.RetrofitApis.RetrofitClient;
+import com.example.t1.RetrofitLoginpage.getlgformat;
+import com.example.t1.RetrofitLoginpage.sendlgformat;
+import com.pranavpandey.android.dynamic.toasts.DynamicToast;
 
 import es.dmoral.toasty.Toasty;
 import retrofit2.Call;
@@ -50,8 +55,11 @@ public class Loginpage extends AppCompatActivity {
                     .apply(); // required
             */
 
-            //DynamicToast.make(this, "All Credentials are Mandatory","#A4303F", "#F0F3F5").show();
-            Toasty.error(this, "All Credentials are Mandatory", Toast.LENGTH_SHORT, true).show();
+            @ColorInt int tintcolor = Color.parseColor("#A4303F");
+            @ColorInt int backgroundcolor = Color.parseColor("#F0F3F5");
+
+            DynamicToast.make(this, "All Credentials are Mandatory",tintcolor, backgroundcolor).show();
+            //Toasty.error(this, "All Credentials are Mandatory", Toast.LENGTH_SHORT, true).show();
         }
         else
         {
