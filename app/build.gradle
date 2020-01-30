@@ -37,4 +37,13 @@ dependencies {
     implementation 'com.github.razir.progressbutton:progressbutton:2.0.0'
     implementation 'br.com.simplepass:loading-button-android:2.2.0'
     implementation 'com.gauravk.bubblenavigation:bubblenavigation:1.0.7'
+
+
+    implementation 'com.squareup.retrofit2:retrofit:2.6.1'
+    implementation 'com.squareup.retrofit2:converter-gson:2.6.1'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.5.0'
+
+    //for toasts
+    implementation 'com.pranavpandey.android:dynamic-toasts:3.0.1'
+    implementation 'com.github.GrenderG:Toasty:1.4.2'
 }
