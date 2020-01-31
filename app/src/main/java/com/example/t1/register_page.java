@@ -11,9 +11,12 @@ import android.widget.Toast;
 
 import com.example.t1.RetrofitApis.ApiInterface;
 import com.example.t1.RetrofitApis.RetrofitClient;
+import com.example.t1.RetrofitRegisPage.Getregisformat;
+import com.example.t1.RetrofitRegisPage.Sendregisformat;
 import com.pranavpandey.android.dynamic.toasts.DynamicToast;
 
 import br.com.simplepass.loadingbutton.customViews.CircularProgressButton;
+import es.dmoral.toasty.Toasty;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -61,13 +64,13 @@ public class register_page extends AppCompatActivity {
 
             ApiInterface apiInterface= RetrofitClient.getClient().create(ApiInterface.class);
             Sendregisformat rgcred=new Sendregisformat(rsemail,rsname,rsroom,rsphn,rspass);
-            Call c=apiInterface.getregdata(rgcred);
-            c.enqueue(new Callback() {
+            Call<Getregisformat> c=apiInterface.getregdata(rgcred);
+            c.enqueue(new Callback<Getregisformat>() {
                 @Override
-                public void onResponse(Call call, Response response) {
+                public void onResponse(Call<Getregisformat> call, Response<Getregisformat> response) {
                     if(response.isSuccessful())
                     {
-                        Toast.makeText(register_page.this, response.message(), Toast.LENGTH_SHORT).show();
+                        Toasty.success(register_page.this, "Successfully Registered", Toast.LENGTH_SHORT, true).show();
                     }
                     else
                     {
@@ -76,8 +79,9 @@ public class register_page extends AppCompatActivity {
                 }
 
                 @Override
-                public void onFailure(Call call, Throwable t) {
+                public void onFailure(Call<Getregisformat> call, Throwable t) {
                     Toast.makeText(register_page.this, t.getMessage(), Toast.LENGTH_SHORT).show();
+                    btn.revertAnimation();
                 }
             });
 

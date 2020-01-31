@@ -92,6 +92,7 @@
             android:onClick="regisclick"
             android:text="Sign Up"
             android:textColor="#fff" />
+
     </LinearLayout>
 
 </LinearLayout>
