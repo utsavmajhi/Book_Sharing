@@ -13,7 +13,7 @@ import android.widget.Toast;
 
 import com.example.t1.RetrofitApis.ApiInterface;
 import com.example.t1.RetrofitApis.RetrofitClient;
-import com.example.t1.RetrofitRegisPage.Getregisformat;
+import com.example.t1.RetrofitLoginpage.getlgformat;
 import com.example.t1.RetrofitRegisPage.Sendregisformat;
 import com.pranavpandey.android.dynamic.toasts.DynamicToast;
 

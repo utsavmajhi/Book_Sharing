@@ -1,6 +1,6 @@
 package com.example.t1.RetrofitApis;
 
-import com.example.t1.getlgformat;
+import com.example.t1.RetrofitLoginpage.getlgformat;
 import com.example.t1.RetrofitLoginpage.sendlgformat;
 import com.example.t1.RetrofitRegisPage.Sendregisformat;
 

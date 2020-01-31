@@ -41,6 +41,8 @@ public class Homepage extends AppCompatActivity implements ZXingScannerView.Resu
     public void handleResult(Result result) {
         Toast.makeText(this, result.getText(), Toast.LENGTH_SHORT).show();
         String value=result.getText();
+
+
        // zXingScannerView.resumeCameraPreview(Homepage.this);
 
 
