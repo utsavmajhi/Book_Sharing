@@ -1,7 +1,6 @@
 package com.example.t1.RetrofitApis;
 
-import com.example.t1.RetrofitRegisPage.Getregisformat;
-import com.example.t1.RetrofitLoginpage.getlgformat;
+import com.example.t1.getlgformat;
 import com.example.t1.RetrofitLoginpage.sendlgformat;
 import com.example.t1.RetrofitRegisPage.Sendregisformat;
 
@@ -17,7 +16,7 @@ public interface ApiInterface {
     Call<getlgformat> getlogindata(@Body sendlgformat sendlgformat);
 
     @POST("api/user/register")
-    Call<Getregisformat> getregdata(@Body Sendregisformat sendregisformat);
+    Call<getlgformat> getregdata(@Body Sendregisformat sendregisformat);
 
 
 

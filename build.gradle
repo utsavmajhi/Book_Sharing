@@ -18,6 +18,7 @@ allprojects {
     repositories {
         google()
         jcenter()
+        maven { url 'https://github.com/softotalss/barcodescanner/raw/master/maven-repository' }
         maven { url "https://jitpack.io" }
         
     }

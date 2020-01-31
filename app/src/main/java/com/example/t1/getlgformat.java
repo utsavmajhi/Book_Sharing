@@ -1,5 +1,5 @@
 
-package com.example.t1.RetrofitLoginpage;
+package com.example.t1;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
