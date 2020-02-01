@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
     tools:context=".Homepage">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fragment_container"
+        android:layout_above="@+id/bottom_navigation_view_linear"/>
 
     <com.gauravk.bubblenavigation.BubbleNavigationLinearView
         android:id="@+id/bottom_navigation_view_linear"
@@ -15,9 +21,8 @@
         android:elevation="8dp"
         android:orientation="horizontal"
         android:padding="12dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        android:layout_alignParentBottom="true"
+       >
 
         <com.gauravk.bubblenavigation.BubbleToggleView
             android:id="@+id/l_item_home"
@@ -49,7 +54,7 @@
             app:bt_colorInactive="@color/blue_grey_inactive"
             app:bt_icon="@drawable/ic_like"
             app:bt_shape="@drawable/transition_background_drawable_like"
-            app:bt_title="Likes" />
+            app:bt_title="My Books" />
 
         <com.gauravk.bubblenavigation.BubbleToggleView
             android:id="@+id/l_item_notification"
@@ -72,29 +77,5 @@
             app:bt_title="Profile" />
     </com.gauravk.bubblenavigation.BubbleNavigationLinearView>
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="376dp"
-        android:layout_height="263dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <Button
-                android:id="@+id/button2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="24dp"
-                android:onClick="addbkclick"
-                android:text="Add Book"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
