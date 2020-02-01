@@ -2,10 +2,13 @@ package com.example.t1.RetrofitApis;
 
 import com.example.t1.RetrofitLoginpage.getlgformat;
 import com.example.t1.RetrofitLoginpage.sendlgformat;
+import com.example.t1.RetrofitRegisPage.Getregisformat;
 import com.example.t1.RetrofitRegisPage.Sendregisformat;
+import com.example.t1.Sendadbkformat;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
+import retrofit2.http.Header;
 import retrofit2.http.POST;
 
 public interface ApiInterface {
@@ -15,8 +18,13 @@ public interface ApiInterface {
     @POST("api/user/login")
     Call<getlgformat> getlogindata(@Body sendlgformat sendlgformat);
 
+    //for registeration of new user
     @POST("api/user/register")
     Call<getlgformat> getregdata(@Body Sendregisformat sendregisformat);
+
+    //for adding of new books
+    @POST("api/user/addbook")
+    Call<Getregisformat> addbookdetails(@Body Sendadbkformat sendadbkformat, @Header("Authorization") String header);
 
 
 

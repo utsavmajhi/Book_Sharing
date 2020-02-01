@@ -7,12 +7,16 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+import com.edwardvanraak.materialbarcodescanner.MaterialBarcodeScanner;
+import com.edwardvanraak.materialbarcodescanner.MaterialBarcodeScannerBuilder;
 import com.example.t1.UnusedPackages.barcodescanner;
+import com.google.android.gms.vision.barcode.Barcode;
 import com.google.zxing.Result;
 
 import me.dm7.barcodescanner.zxing.ZXingScannerView;
 
-public class Homepage extends AppCompatActivity implements ZXingScannerView.ResultHandler {
+public class Homepage extends AppCompatActivity /*implements ZXingScannerView.ResultHandler*/ {
+    private Barcode barcodeResult;
     private ZXingScannerView zXingScannerView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,31 +24,40 @@ public class Homepage extends AppCompatActivity implements ZXingScannerView.Resu
         setContentView(R.layout.activity_homepage);
     }
 
+    //Barcode Scanner
+    private void startScan() {
+        /**
+         * Build a new MaterialBarcodeScanner
+         */
+        final MaterialBarcodeScanner materialBarcodeScanner = new MaterialBarcodeScannerBuilder()
+                .withActivity(Homepage.this)
+                .withEnableAutoFocus(true)
+                .withBleepEnabled(true)
+                .withBackfacingCamera()
+                .withText("Scanning...")
+                .withResultListener(new MaterialBarcodeScanner.OnResultListener() {
+
+                    @Override
+                    public void onResult(Barcode barcode) {
+                        barcodeResult = barcode;
+                       // result.setText(barcode.rawValue);
+                        Toast.makeText(Homepage.this, barcode.rawValue, Toast.LENGTH_SHORT).show();
+                    }
+
+                })
+                .build();
+        materialBarcodeScanner.startScan();
+    }
+
+    //barcode scanner ends
+
     public void addbkclick(View view) {
 
-        zXingScannerView=new ZXingScannerView(getApplicationContext());
-        setContentView(zXingScannerView);
-        zXingScannerView.setResultHandler(Homepage.this);
-        zXingScannerView.startCamera();
-        zXingScannerView.setAutoFocus(true);
-        // startActivity(new Intent(Homepage.this, barcodescanner.class));
-
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-        zXingScannerView.stopCamera();
-    }
-
-    @Override
-    public void handleResult(Result result) {
-        Toast.makeText(this, result.getText(), Toast.LENGTH_SHORT).show();
-        String value=result.getText();
-
-
-       // zXingScannerView.resumeCameraPreview(Homepage.this);
+        startActivity(new Intent(Homepage.this,add_bookspage.class));
+       // startScan();
 
 
     }
+
+
 }

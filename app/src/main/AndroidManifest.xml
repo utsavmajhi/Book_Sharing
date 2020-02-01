@@ -15,6 +15,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
+        <activity android:name=".add_bookspage"></activity>
         <activity android:name=".UnusedPackages.barcodescanner" />
 
         <meta-data
