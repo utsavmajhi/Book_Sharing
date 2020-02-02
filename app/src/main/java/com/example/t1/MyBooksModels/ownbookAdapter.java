@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -13,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.t1.R;
 import com.example.t1.particularbkdetails;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -36,6 +38,17 @@ public class ownbookAdapter extends RecyclerView.Adapter<ownbookAdapter.ownbookV
         holder.mbkname.setText(mallbookitemlist.get(position).getBookname());
         holder.mbkauthor.setText(mallbookitemlist.get(position).getAuthor());
         holder.mbkisbn.setText(mallbookitemlist.get(position).getIsbn());
+        String path=mallbookitemlist.get(position).imageurl;
+        if(!path.isEmpty())
+        {
+            Picasso.with(mContext).load(mallbookitemlist.get(position).imageurl)
+                    .placeholder(R.drawable.bkimage).into(holder.mbkcover);
+        }
+       /* Picasso.with(mContext).load(mallbookitemlist.get(position).imageurl)
+                .placeholder(R.drawable.bkimage).into(holder.mbkcover);
+
+        */
+
 
         //click item listener
         holder.itemView.setOnClickListener(new View.OnClickListener() {
@@ -71,7 +84,7 @@ public class ownbookAdapter extends RecyclerView.Adapter<ownbookAdapter.ownbookV
         public TextView mbkname;
         public TextView mbkauthor;
         public TextView mbkisbn;
-
+        public ImageView mbkcover;
 
         public ownbookView(@NonNull View itemView) {
             super(itemView);
@@ -79,6 +92,7 @@ public class ownbookAdapter extends RecyclerView.Adapter<ownbookAdapter.ownbookV
             mbkname=itemView.findViewById(R.id.mybksinglename);
             mbkauthor=itemView.findViewById(R.id.mybksingleauthor);
             mbkisbn=itemView.findViewById(R.id.mybksingleisbn);
+            mbkcover=itemView.findViewById(R.id.itembkcover);
         }
     }
 
