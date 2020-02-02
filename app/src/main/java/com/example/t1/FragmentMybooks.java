@@ -12,6 +12,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.t1.MyBooksModels.Book;
+import com.example.t1.MyBooksModels.Getmybooksformat;
+import com.example.t1.MyBooksModels.mybookitem;
+import com.example.t1.MyBooksModels.ownbookAdapter;
 import com.example.t1.RetrofitApis.ApiInterface;
 import com.example.t1.RetrofitApis.RetrofitClient;
 
@@ -73,7 +77,8 @@ public class FragmentMybooks extends Fragment {
                         String bname=mybooks.get(i).getBookName();
                         String bauth=mybooks.get(i).getAuthor();
                         String bisbn=mybooks.get(i).getIsbn();
-                        mallbooklist.add(new mybookitem(bname,bauth,bisbn));
+                        String bisimgurl=mybooks.get(i).getCover();
+                        mallbooklist.add(new mybookitem(bname,bauth,bisimgurl,bisbn));
 
                     }
                     mallbookadpater=new ownbookAdapter(getActivity(),mallbooklist);

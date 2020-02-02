@@ -1,17 +1,19 @@
 package com.example.t1.RetrofitApis;
 
-import com.example.t1.Getmybooksformat;
+import com.example.t1.MyBooksModels.Getmybooksformat;
 import com.example.t1.RetrofitLoginpage.getlgformat;
 import com.example.t1.RetrofitLoginpage.sendlgformat;
 import com.example.t1.RetrofitRegisPage.Getregisformat;
 import com.example.t1.RetrofitRegisPage.Sendregisformat;
 import com.example.t1.Retrofitaddbooks.Sendadbkformat;
+import com.example.t1.Sendcoverimgurlformat;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.Header;
 import retrofit2.http.POST;
+import retrofit2.http.PUT;
 
 public interface ApiInterface {
 
@@ -30,6 +32,9 @@ public interface ApiInterface {
 
     @GET("api/user/getallownedbook")
     Call<Getmybooksformat> mybooksdetails(@Header("Authorization") String header);
+
+    @PUT("api/user/changecover")
+    Call<Getregisformat> changecover(@Body Sendcoverimgurlformat sendcoverimgurlformat, @Header("Authorization") String header);
 
 
 

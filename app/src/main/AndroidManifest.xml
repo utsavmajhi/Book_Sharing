@@ -15,13 +15,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".add_bookspage"></activity>
+        <activity android:name=".particularbkdetails"></activity>
+        <activity android:name=".add_bookspage" />
         <activity android:name=".UnusedPackages.barcodescanner" />
 
         <meta-data
             android:name="com.google.firebase.ml.vision.DEPENDENCIES"
             android:value="barcode" /> <!-- To use multiple models: android:value="barcode,model2,model3" -->
-        <activity android:name=".Addingbooks" />
         <activity android:name=".Homepage" />
         <activity android:name=".register_page" />
         <activity android:name=".Loginpage" />

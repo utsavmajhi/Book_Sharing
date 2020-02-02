@@ -1,15 +1,10 @@
-package com.example.t1;
+package com.example.t1.MyBooksModels;
 
 public class mybookitem {
 
     String bookname;
     String Author;
-
-    public mybookitem(String bookname, String author, String isbn) {
-        this.bookname = bookname;
-        Author = author;
-        Isbn = isbn;
-    }
+    String imageurl;
 
     public String getBookname() {
         return bookname;
@@ -27,11 +22,26 @@ public class mybookitem {
         Author = author;
     }
 
+    public String getImageurl() {
+        return imageurl;
+    }
+
+    public void setImageurl(String imageurl) {
+        this.imageurl = imageurl;
+    }
+
     public String getIsbn() {
         return Isbn;
     }
 
     public void setIsbn(String isbn) {
+        Isbn = isbn;
+    }
+
+    public mybookitem(String bookname, String author, String imageurl, String isbn) {
+        this.bookname = bookname;
+        Author = author;
+        this.imageurl = imageurl;
         Isbn = isbn;
     }
 
