@@ -1,6 +1,7 @@
 package com.example.t1;
 
 
+import android.bluetooth.BluetoothAdapter;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 
@@ -36,6 +37,7 @@ import static android.content.Context.MODE_PRIVATE;
 public class FragmentMybooks extends Fragment {
 
     private ownbookAdapter mallbookadpater;
+
     private ArrayList<mybookitem> mallbooklist;
     public FragmentMybooks() {
         // Required empty public constructor

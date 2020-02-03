@@ -36,8 +36,8 @@ public class ownbookAdapter extends RecyclerView.Adapter<ownbookAdapter.ownbookV
     @Override
     public void onBindViewHolder(@NonNull ownbookView holder, final int position) {
         holder.mbkname.setText(mallbookitemlist.get(position).getBookname());
-        holder.mbkauthor.setText(mallbookitemlist.get(position).getAuthor());
-        holder.mbkisbn.setText(mallbookitemlist.get(position).getIsbn());
+        holder.mbkauthor.setText("Author:"+mallbookitemlist.get(position).getAuthor());
+        holder.mbkisbn.setText("ISBN:"+mallbookitemlist.get(position).getIsbn());
         String path=mallbookitemlist.get(position).imageurl;
         if(!path.isEmpty())
         {

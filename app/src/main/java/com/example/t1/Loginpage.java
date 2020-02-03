@@ -32,6 +32,13 @@ public class Loginpage extends AppCompatActivity {
         setContentView(R.layout.activity_loginpage);
         lgem=findViewById(R.id.lgemail);
         lgpassword=findViewById(R.id.lgpass);
+        SharedPreferences sharedPreferences=getSharedPreferences("Secrets",MODE_PRIVATE);
+        String currenttoken=sharedPreferences.getString("token","");
+        if(!currenttoken.isEmpty())
+        {
+            startActivity(new Intent(Loginpage.this,Homepage.class));
+            finish();
+        }
     }
 
     public void regisclick(View view) {

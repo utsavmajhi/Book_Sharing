@@ -54,4 +54,9 @@ public class Homepage extends AppCompatActivity  {
     }
 
 
+    public void gy(View view) {
+
+        startActivity(new Intent(Homepage.this,add_bookspage.class));
+    }
+
 }
