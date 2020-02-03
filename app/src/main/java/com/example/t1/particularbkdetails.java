@@ -24,9 +24,11 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
+import com.iceteck.silicompressorr.SiliCompressor;
 import com.squareup.picasso.Picasso;
 import com.theartofdev.edmodo.cropper.CropImage;
 
+import java.io.File;
 import java.util.Objects;
 
 import es.dmoral.toasty.Toasty;
@@ -83,10 +85,13 @@ public class particularbkdetails extends AppCompatActivity {
             CropImage.ActivityResult result = CropImage.getActivityResult(data);
             if (resultCode == RESULT_OK) {
                 Uri resultUri = result.getUri();
+                String filepath4=resultUri.getPath();
+                //Toast.makeText(this, filepath4, Toast.LENGTH_SHORT).show();
+                String newcompressedimagepath = SiliCompressor.with(particularbkdetails.this).compress(filepath4, new File("/data/user/0/com.example.t1/cache/"));
                 Intent intent=getIntent();
                 String bkisbn=intent.getStringArrayExtra("ID_EXTRA")[0];
                 final StorageReference filepath=mImageStorage.child("BookCovers").child(bkisbn+".jpg");
-                filepath.putFile(resultUri).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
+                filepath.putFile(Uri.fromFile(new File(newcompressedimagepath))).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
                     @Override
                     public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
                         if(task.isSuccessful())
