@@ -3,19 +3,52 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".HomeFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="HOME FRAGEMENT" />
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="gy"
-        android:text="Button" />
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/amaranth"
+            android:text="Best Selling Books"
+            android:textSize="18sp" />
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/first_home_recyler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="horizontal"
+
+            app:msrv_interval="3" >
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/amaranth"
+            android:text="All Books"
+            android:textSize="18sp" />
+
+        <com.takusemba.multisnaprecyclerview.MultiSnapRecyclerView
+            android:id="@+id/second_home_recyler"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:orientation="horizontal"
+
+            app:msrv_interval="3" />
+
+
+    </LinearLayout>
 </FrameLayout>

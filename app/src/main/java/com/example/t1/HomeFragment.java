@@ -1,20 +1,47 @@
 package com.example.t1;
 
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.example.t1.MyBooksModels.Book;
+import com.example.t1.MyBooksModels.Getmybooksformat;
+import com.example.t1.MyBooksModels.mybookitem;
+import com.example.t1.MyBooksModels.ownbookAdapter;
+import com.example.t1.RetrofitApis.ApiInterface;
+import com.example.t1.RetrofitApis.RetrofitClient;
+import com.takusemba.multisnaprecyclerview.MultiSnapRecyclerView;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import es.dmoral.toasty.Toasty;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
+import static android.content.Context.MODE_PRIVATE;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class HomeFragment extends Fragment {
+    private ownbookAdapter mallbookadpater;
 
+    private ArrayList<mybookitem> mallbooklist;
+    RecyclerView recyclerView;
+
+    MultiSnapRecyclerView recyclerView1;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -24,8 +51,110 @@ public class HomeFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false);
+
+        View view=inflater.inflate(R.layout.fragment_home, container, false);
+        mallbooklist=new ArrayList<>();
+        recyclerView=view.findViewById(R.id.first_home_recyler);
+        recyclerView1=view.findViewById(R.id.second_home_recyler);
+        GridLayoutManager gridLayoutManager=new GridLayoutManager(getContext(),2);
+
+        LinearLayoutManager horizontalLayoutManager  = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);//for horizontal recycler view
+        //remember to use when using horizontal scroll viewer
+        LinearLayoutManager horizontalLayoutManager1 = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
+        recyclerView.setLayoutManager(horizontalLayoutManager);
+        recyclerView1.setLayoutManager(gridLayoutManager);
+
+
+
+        firsthorizontalviewer();
+        secondhorixzontalviewer();
+
+        return view;
+
+
     }
 
+    private void secondhorixzontalviewer() {
+
+        SharedPreferences sharedPreferences=this.getActivity().getSharedPreferences("Secrets",MODE_PRIVATE);
+        String currenttoken=sharedPreferences.getString("token","");
+        ApiInterface apiInterface= RetrofitClient.getClient().create(ApiInterface.class);
+        Call<Getmybooksformat> c=apiInterface.mybooksdetails(currenttoken);
+        c.enqueue(new Callback<Getmybooksformat>() {
+            @Override
+            public void onResponse(Call<Getmybooksformat> call, Response<Getmybooksformat> response) {
+                if(response.isSuccessful())
+                {
+                    List<Book> mybooks=response.body().getBooks();
+                    for(int i=0;i<mybooks.size();i++)
+                    {
+                        String bname=mybooks.get(i).getBookName();
+                        String bauth=mybooks.get(i).getAuthor();
+                        String bisbn=mybooks.get(i).getIsbn();
+                        String bisimgurl=mybooks.get(i).getCover();
+                        mallbooklist.add(new mybookitem(bname,bauth,bisimgurl,bisbn));
+
+                    }
+                    mallbookadpater=new ownbookAdapter(getActivity(),mallbooklist);
+                    recyclerView1.setAdapter(mallbookadpater);
+
+
+                }
+                else
+                {
+                    Toasty.error(getContext(),response.message(),Toasty.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Getmybooksformat> call, Throwable t) {
+                Toasty.error(getContext(),t.getMessage(),Toasty.LENGTH_SHORT).show();
+            }
+        });
+
+    }
+
+    private void firsthorizontalviewer() {
+
+
+        SharedPreferences sharedPreferences=this.getActivity().getSharedPreferences("Secrets",MODE_PRIVATE);
+        String currenttoken=sharedPreferences.getString("token","");
+        ApiInterface apiInterface= RetrofitClient.getClient().create(ApiInterface.class);
+        Call<Getmybooksformat> c=apiInterface.mybooksdetails(currenttoken);
+        c.enqueue(new Callback<Getmybooksformat>() {
+            @Override
+            public void onResponse(Call<Getmybooksformat> call, Response<Getmybooksformat> response) {
+                if(response.isSuccessful())
+                {
+                    List<Book> mybooks=response.body().getBooks();
+                    for(int i=0;i<mybooks.size();i++)
+                    {
+                        String bname=mybooks.get(i).getBookName();
+                        String bauth=mybooks.get(i).getAuthor();
+                        String bisbn=mybooks.get(i).getIsbn();
+                        String bisimgurl=mybooks.get(i).getCover();
+                        mallbooklist.add(new mybookitem(bname,bauth,bisimgurl,bisbn));
+
+                    }
+                    mallbookadpater=new ownbookAdapter(getActivity(),mallbooklist);
+                    recyclerView.setAdapter(mallbookadpater);
+
+
+                }
+                else
+                {
+                    Toasty.error(getContext(),response.message(),Toasty.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Getmybooksformat> call, Throwable t) {
+                Toasty.error(getContext(),t.getMessage(),Toasty.LENGTH_SHORT).show();
+            }
+        });
+
+
+    }
 }
+
+
