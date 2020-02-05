@@ -1,12 +1,13 @@
 package com.example.t1.RetrofitApis;
 
+import com.example.t1.HomeAllcurrentbookModel.Getallcurrentbooks;
 import com.example.t1.MyBooksModels.Getmybooksformat;
 import com.example.t1.RetrofitLoginpage.getlgformat;
 import com.example.t1.RetrofitLoginpage.sendlgformat;
 import com.example.t1.RetrofitRegisPage.Getregisformat;
 import com.example.t1.RetrofitRegisPage.Sendregisformat;
 import com.example.t1.Retrofitaddbooks.Sendadbkformat;
-import com.example.t1.Sendcoverimgurlformat;
+import com.example.t1.RetrofitCoverimageModels.Sendcoverimgurlformat;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
@@ -35,6 +36,11 @@ public interface ApiInterface {
 
     @PUT("api/user/changecover")
     Call<Getregisformat> changecover(@Body Sendcoverimgurlformat sendcoverimgurlformat, @Header("Authorization") String header);
+
+    //for all books in the database
+    @GET("api/user/getallcurentbook")
+    Call<Getallcurrentbooks> getallcurrentbk(@Header("Authorization") String header);
+
 
 
 

@@ -13,10 +13,10 @@ import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import com.example.t1.RetrofitApis.ApiInterface;
 import com.example.t1.RetrofitApis.RetrofitClient;
+import com.example.t1.RetrofitCoverimageModels.Sendcoverimgurlformat;
 import com.example.t1.RetrofitRegisPage.Getregisformat;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -29,7 +29,6 @@ import com.squareup.picasso.Picasso;
 import com.theartofdev.edmodo.cropper.CropImage;
 
 import java.io.File;
-import java.util.Objects;
 
 import es.dmoral.toasty.Toasty;
 import retrofit2.Call;

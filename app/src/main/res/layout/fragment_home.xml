@@ -40,7 +40,7 @@
             android:text="All Books"
             android:textSize="18sp" />
 
-        <com.takusemba.multisnaprecyclerview.MultiSnapRecyclerView
+        <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/second_home_recyler"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
