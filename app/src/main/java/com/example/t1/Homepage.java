@@ -38,8 +38,8 @@ public class Homepage extends AppCompatActivity  {
                     case 2:
                         selectedFragment=new FragmentMybooks();
                         break;
-                    case 5:
-                        selectedFragment=new FragmentProfile();
+                    case 4:
+                        selectedFragment=new profilefragment();
                         break;
                 }
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,selectedFragment).commit();
