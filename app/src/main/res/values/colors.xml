@@ -33,5 +33,22 @@
     <color name="orange_bg_light">#fff3e0</color>
     <color name="grey_bg_light">#fafafa</color>
 
+    <color name="black">#000000</color>
+    <color name="very_light_grey">#eeeeee</color>
+    <color name="shadow">#999999</color>
+    <color name="shadow2">#DCDCDC</color>
+    <color name="dark_gray">#696969</color>
+    <color name="transparent">#00000000</color>
+    <color name="fb">#3b5998</color>
+    <color name="address">#2F7092</color>
+    <color name="followers">#0D5D98</color>
+    <color name="headings">#3797CF</color>
+    <color name="solidCircle">#AAFFFFFF</color>
+    <color name="circleBorder">#50FFFFFF</color>
+    <color name="gradEnd">#67EFC8</color>
+    <color name="gradStart">#63C9FF</color>
+    <color name="followersBg">#E5D465</color>
+    <color name="followingBg">#49BEFF</color>
+    <color name="grey">#E5E5E5</color>
     <color name="white">#ffffff</color>
 </resources>
