@@ -41,6 +41,9 @@ public interface ApiInterface {
     @GET("api/user/getallcurentbook")
     Call<Getallcurrentbooks> getallcurrentbk(@Header("Authorization") String header);
 
+    //profile fragment details of the user
+
+
 
 
 

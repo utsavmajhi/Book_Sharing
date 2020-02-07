@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/back9"
-    tools:context=".profilefragment" >
+    android:background="@drawable/back10"
+    tools:context=".profilefragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -23,9 +23,9 @@
                 android:layout_marginTop="48dp"
                 android:layout_marginEnd="28dp"
                 android:layout_marginRight="28dp"
+                android:src="@drawable/dummyavatar"
                 app:civ_border_color="@color/white"
                 app:civ_border_width="4dp"
-                android:src="@drawable/dummyavatar"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
@@ -80,7 +80,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Email"
+                        android:text="Name"
                         android:textColor="@color/colorAccent"
                         android:textSize="13sp" />
 
@@ -140,7 +140,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Invested Pools"
+                        android:text="Room No"
                         android:textColor="@color/accent"
                         android:textSize="13sp" />
 
@@ -149,7 +149,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-light"
-                        android:text="0"
+                        android:text="A-235"
                         android:textColor="#000000"
                         android:textSize="18sp" />
 
@@ -170,7 +170,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Returns"
+                        android:text="Owned Books"
                         android:textColor="@color/accent"
                         android:textSize="13sp" />
 
@@ -179,7 +179,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-light"
-                        android:text="Rs 0"
+                        android:text="4"
                         android:textColor="#000000"
                         android:textSize="18sp" />
 
@@ -198,7 +198,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Aadhar Number"
+                            android:text="Extra"
                             android:textColor="@color/accent"
                             android:textSize="13sp" />
 
@@ -207,7 +207,6 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="sans-serif-light"
-                            android:text="4567 7896 2874 2345"
                             android:textColor="#000000"
                             android:textSize="18sp" />
 
