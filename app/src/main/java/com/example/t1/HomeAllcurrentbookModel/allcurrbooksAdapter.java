@@ -16,7 +16,7 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 
 public class allcurrbooksAdapter extends RecyclerView.Adapter<allcurrbooksAdapter.MyViewHolder> {
-    Context mContext;
+    private Context mContext;
 
     public allcurrbooksAdapter(Context mContext, ArrayList<allbookitemrecy> mallcurrbookitemlist) {
         this.mContext = mContext;
@@ -51,7 +51,15 @@ public class allcurrbooksAdapter extends RecyclerView.Adapter<allcurrbooksAdapte
     @Override
     public int getItemCount() {
 
-        return mallcurrbookitemlist.size();
+        if(!(mallcurrbookitemlist ==null))
+        {
+            return mallcurrbookitemlist.size();
+        }
+        else
+        {
+            return 0;
+        }
+
     }
 
     public static class MyViewHolder extends RecyclerView.ViewHolder{

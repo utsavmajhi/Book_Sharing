@@ -11,6 +11,13 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <Button
+            android:id="@+id/addbtnbk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onclicklist"
+            android:text="Addbooks" />
+
         <TextView
             android:id="@+id/textView4"
             android:layout_gravity="center_horizontal"

@@ -74,7 +74,16 @@ public class ownbookAdapter extends RecyclerView.Adapter<ownbookAdapter.ownbookV
 
     @Override
     public int getItemCount() {
-        return mallbookitemlist.size();
+
+        if(!(mallbookitemlist==null))
+        {
+            return mallbookitemlist.size();
+        }
+        else
+        {
+            return 0;
+        }
+
     }
 
     public class ownbookView extends RecyclerView.ViewHolder{

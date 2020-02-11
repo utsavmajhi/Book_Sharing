@@ -93,22 +93,26 @@ public class HomeFragment extends Fragment {
            public void onResponse(Call<Getallcurrentbooks> call, Response<Getallcurrentbooks> response) {
                if(response.isSuccessful())
                {
-                   List<com.example.t1.HomeAllcurrentbookModel.Book> allbooks=response.body().getBooks();
-                   for(int i=0;i<allbooks.size();i++)
+                   if(!(response.body().getBooks()==null))
                    {
-                       String isbn=allbooks.get(i).getBookDetails().getIsbn();
-                       String bookname=allbooks.get(i).getBookDetails().getBookName();
-                       String bookauthor=allbooks.get(i).getBookDetails().getAuthor();
-                       String bookowner=allbooks.get(i).getBookDetails().getOwner();
-                       String bookcurentown=allbooks.get(i).getBookDetails().getCurrent();
-                       String bookcoverimg=allbooks.get(i).getBookDetails().getCover();
-                       String bookgottime= String.valueOf(allbooks.get(i).getGotOn());
-                       mallcurrbooklist.add(new allbookitemrecy(bookname,bookauthor,bookcoverimg,bookcurentown,bookowner,bookgottime,isbn));
+                       List<com.example.t1.HomeAllcurrentbookModel.Book> allbooks=response.body().getBooks();
+                       for(int i=0;i<allbooks.size();i++)
+                       {
+                           String isbn=allbooks.get(i).getBookDetails().getIsbn();
+                           String bookname=allbooks.get(i).getBookDetails().getBookName();
+                           String bookauthor=allbooks.get(i).getBookDetails().getAuthor();
+                           String bookowner=allbooks.get(i).getBookDetails().getOwner();
+                           String bookcurentown=allbooks.get(i).getBookDetails().getCurrent();
+                           String bookcoverimg=allbooks.get(i).getBookDetails().getCover();
+                           String bookgottime= String.valueOf(allbooks.get(i).getGotOn());
+                           mallcurrbooklist.add(new allbookitemrecy(bookname,bookauthor,bookcoverimg,bookcurentown,bookowner,bookgottime,isbn));
 
+
+                       }
+                       mallcurrbookadapter=new allcurrbooksAdapter(getActivity(),mallcurrbooklist);
+                       recyclerView1.setAdapter(mallcurrbookadapter);
 
                    }
-                   mallcurrbookadapter=new allcurrbooksAdapter(getActivity(),mallcurrbooklist);
-                   recyclerView1.setAdapter(mallcurrbookadapter);
 
                }
                else
@@ -138,19 +142,23 @@ public class HomeFragment extends Fragment {
             public void onResponse(Call<Getmybooksformat> call, Response<Getmybooksformat> response) {
                 if(response.isSuccessful())
                 {
-                    List<Book> mybooks=response.body().getBooks();
-                    for(int i=0;i<mybooks.size();i++)
+                    if(!(response.body().getBooks()==null))
                     {
-                        String bname=mybooks.get(i).getBookName();
-                        String bauth=mybooks.get(i).getAuthor();
-                        String bisbn=mybooks.get(i).getIsbn();
-                        String bisimgurl=mybooks.get(i).getCover();
-                        mallbooklist.add(new mybookitem(bname,bauth,bisimgurl,bisbn));
+                        List<Book> mybooks=response.body().getBooks();
+                        for(int i=0;i<mybooks.size();i++)
+                        {
+                            String bname=mybooks.get(i).getBookName();
+                            String bauth=mybooks.get(i).getAuthor();
+                            String bisbn=mybooks.get(i).getIsbn();
+                            String bisimgurl=mybooks.get(i).getCover();
+                            mallbooklist.add(new mybookitem(bname,bauth,bisimgurl,bisbn));
+
+                        }
+                        mallbookadpater=new ownbookAdapter(getActivity(),mallbooklist);
+                        recyclerView.setAdapter(mallbookadpater);
+
 
                     }
-                    mallbookadpater=new ownbookAdapter(getActivity(),mallbooklist);
-                    recyclerView.setAdapter(mallbookadpater);
-
 
                 }
                 else

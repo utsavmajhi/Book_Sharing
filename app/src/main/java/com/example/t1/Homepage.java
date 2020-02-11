@@ -50,16 +50,7 @@ public class Homepage extends AppCompatActivity  {
 
 
     //barcode scanner ends
-
-    public void addbkclick(View view) {
-
+    public void onclicklist(View view) {
         startActivity(new Intent(Homepage.this,add_bookspage.class));
     }
-
-
-    public void gy(View view) {
-
-        startActivity(new Intent(Homepage.this,add_bookspage.class));
-    }
-
 }
