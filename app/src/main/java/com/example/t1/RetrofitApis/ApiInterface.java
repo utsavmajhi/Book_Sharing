@@ -38,7 +38,7 @@ public interface ApiInterface {
     Call<Getregisformat> changecover(@Body Sendcoverimgurlformat sendcoverimgurlformat, @Header("Authorization") String header);
 
     //for all books in the database
-    @GET("api/user/getallcurentbook")
+    @GET("api/user/getallthebook")
     Call<Getallcurrentbooks> getallcurrentbk(@Header("Authorization") String header);
 
     //profile fragment details of the user

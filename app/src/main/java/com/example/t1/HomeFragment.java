@@ -98,13 +98,13 @@ public class HomeFragment extends Fragment {
                        List<com.example.t1.HomeAllcurrentbookModel.Book> allbooks=response.body().getBooks();
                        for(int i=0;i<allbooks.size();i++)
                        {
-                           String isbn=allbooks.get(i).getBookDetails().getIsbn();
-                           String bookname=allbooks.get(i).getBookDetails().getBookName();
-                           String bookauthor=allbooks.get(i).getBookDetails().getAuthor();
-                           String bookowner=allbooks.get(i).getBookDetails().getOwner();
-                           String bookcurentown=allbooks.get(i).getBookDetails().getCurrent();
-                           String bookcoverimg=allbooks.get(i).getBookDetails().getCover();
-                           String bookgottime= String.valueOf(allbooks.get(i).getGotOn());
+                           String isbn=allbooks.get(i).getIsbn();
+                           String bookname=allbooks.get(i).getBookName();
+                           String bookauthor=allbooks.get(i).getAuthor();
+                           String bookowner=allbooks.get(i).getOwner();
+                           String bookcurentown=allbooks.get(i).getCurrent();
+                           String bookcoverimg=allbooks.get(i).getCover();
+                           String bookgottime="0";
                            mallcurrbooklist.add(new allbookitemrecy(bookname,bookauthor,bookcoverimg,bookcurentown,bookowner,bookgottime,isbn));
 
 
