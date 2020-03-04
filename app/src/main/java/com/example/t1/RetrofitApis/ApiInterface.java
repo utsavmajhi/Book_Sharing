@@ -1,5 +1,6 @@
 package com.example.t1.RetrofitApis;
 
+import com.example.t1.Getpersonaldet;
 import com.example.t1.HomeAllcurrentbookModel.Getallcurrentbooks;
 import com.example.t1.MyBooksModels.Getmybooksformat;
 import com.example.t1.RetrofitLoginpage.getlgformat;
@@ -42,6 +43,8 @@ public interface ApiInterface {
     Call<Getallcurrentbooks> getallcurrentbk(@Header("Authorization") String header);
 
     //profile fragment details of the user
+    @GET("api/user/me")
+    Call<Getpersonaldet> getmedetails(@Header("Authorization") String header);
 
 
 
