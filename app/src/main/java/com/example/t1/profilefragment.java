@@ -11,11 +11,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.t1.HomeAllcurrentbookModel.Getallcurrentbooks;
 import com.example.t1.MyBooksModels.Book;
 import com.example.t1.MyBooksModels.Getmybooksformat;
 import com.example.t1.RetrofitApis.ApiInterface;
 import com.example.t1.RetrofitApis.RetrofitClient;
+import com.example.t1.RetrofitUserProfileModels.Getpersonaldet;
 
 import java.util.List;
 

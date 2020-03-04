@@ -1,6 +1,6 @@
 package com.example.t1.RetrofitApis;
 
-import com.example.t1.Getpersonaldet;
+import com.example.t1.RetrofitUserProfileModels.Getpersonaldet;
 import com.example.t1.HomeAllcurrentbookModel.Getallcurrentbooks;
 import com.example.t1.MyBooksModels.Getmybooksformat;
 import com.example.t1.RetrofitLoginpage.getlgformat;

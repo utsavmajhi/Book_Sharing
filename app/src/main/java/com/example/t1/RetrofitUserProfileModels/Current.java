@@ -1,5 +1,5 @@
 
-package com.example.t1;
+package com.example.t1.RetrofitUserProfileModels;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
