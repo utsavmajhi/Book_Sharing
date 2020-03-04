@@ -91,4 +91,10 @@ dependencies {
     implementation 'com.github.takusemba:multisnaprecyclerview:2.0.1'
     implementation 'com.android.support:recyclerview-v7:28.0.0'
 
+    //for read more
+    implementation 'com.borjabravo:readmoretextview:2.1.0'
+
+    implementation 'com.github.ericwjr:floating-text-button:0.1.8'
 }
+
+

@@ -1,6 +1,7 @@
 package com.example.t1.HomeAllcurrentbookModel;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.t1.ClickOnBookDetexpand;
 import com.example.t1.R;
 import com.squareup.picasso.Picasso;
 
@@ -33,7 +35,7 @@ public class allcurrbooksAdapter extends RecyclerView.Adapter<allcurrbooksAdapte
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull MyViewHolder holder, final int position) {
 
         holder.mbkname.setText(mallcurrbookitemlist.get(position).getBookname());
         holder.mbkauthor.setText("Author:"+mallcurrbookitemlist.get(position).getAuthor());
@@ -44,6 +46,20 @@ public class allcurrbooksAdapter extends RecyclerView.Adapter<allcurrbooksAdapte
             Picasso.with(mContext).load(mallcurrbookitemlist.get(position).getCover())
                     .placeholder(R.drawable.bkimage).into(holder.mbkcover);
         }
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                allbookitemrecy m=mallcurrbookitemlist.get(position);
+                String isbn=m.getBookIsbn();
+                String name=m.getBookname();
+                String author=m.getAuthor();
+                String imurl=m.getCover();
+                Intent i=new Intent(v.getContext(), ClickOnBookDetexpand.class);
+                i.putExtra("ID_EXTRA",new String[]{isbn,name,author,imurl});
+                v.getContext().startActivity(i);
+            }
+        });
 
 
 
