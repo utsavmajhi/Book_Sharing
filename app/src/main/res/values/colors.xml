@@ -30,7 +30,7 @@
     <color name="green_bg_light">#e8f5e9</color>
     <color name="blue_grey_bg_light">#eceff1</color>
     <color name="yellow_bg_light">#fffde7</color>
-    <color name="orange_bg_light">#fff3e0</color>
+    <color name="orange_bg_light">#FFF3E0</color>
     <color name="grey_bg_light">#fafafa</color>
 
     <color name="black">#000000</color>

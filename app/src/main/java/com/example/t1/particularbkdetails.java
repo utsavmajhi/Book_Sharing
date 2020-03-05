@@ -18,6 +18,7 @@ import com.example.t1.RetrofitApis.ApiInterface;
 import com.example.t1.RetrofitApis.RetrofitClient;
 import com.example.t1.RetrofitCoverimageModels.Sendcoverimgurlformat;
 import com.example.t1.RetrofitRegisPage.Getregisformat;
+import com.github.jlmd.animatedcircleloadingview.AnimatedCircleLoadingView;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
@@ -31,6 +32,7 @@ import com.theartofdev.edmodo.cropper.CropImage;
 import java.io.File;
 
 import es.dmoral.toasty.Toasty;
+import is.arontibo.library.ElasticDownloadView;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -39,6 +41,7 @@ public class particularbkdetails extends AppCompatActivity {
     private Toolbar mtoolbar;
     private StorageReference mImageStorage;
     private  static final int GALLERY_PIC=1;
+
     private ImageView bkcoverimg;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,6 +65,9 @@ public class particularbkdetails extends AppCompatActivity {
     }
 
     public void changecoverclick(View view) {
+
+
+
         Intent galleryIntent=new Intent();
         galleryIntent.setType("image/*");
         galleryIntent.setAction(Intent.ACTION_GET_CONTENT);

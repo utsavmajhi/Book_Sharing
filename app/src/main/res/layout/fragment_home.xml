@@ -11,13 +11,6 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <Button
-            android:id="@+id/addbtnbk"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="onclicklist"
-            android:text="Addbooks" />
-
         <TextView
             android:id="@+id/textView4"
             android:layout_gravity="center_horizontal"
@@ -34,7 +27,8 @@
 
             android:orientation="horizontal"
 
-            app:msrv_interval="3" >
+            android:padding="4dp"
+            app:msrv_interval="3">
 
         </androidx.recyclerview.widget.RecyclerView>
 
@@ -54,6 +48,7 @@
 
             android:orientation="horizontal"
 
+            android:padding="4dp"
             app:msrv_interval="3" />
 
 
