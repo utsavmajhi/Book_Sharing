@@ -35,21 +35,6 @@ In this project,we are trying to build a decentralized platform for students to 
 
 ---
 
-## Example (Optional)
-
-```javascript
-// code away!
-
-let generateProject = project => {
-  let code = [];
-  for (let js = 0; js < project.length; js++) {
-    code.push(js);
-  }
-};
-```
-
----
-
 ## Installation
 ### Clone
 
@@ -102,8 +87,6 @@ $ bower install
 ---
 
 ## Usage (Optional)
-## Documentation (Optional)
-## Tests (Optional)
 
 - Going into more detail on code and technologies used
 - I utilized this nifty <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet" target="_blank">Markdown Cheatsheet</a> for this sample `README`.
@@ -120,7 +103,7 @@ $ bower install
     - 🍴 Fork this repo!
 
 - **Option 2**
-    - 👯 Clone this repo to your local machine using `https://github.com/joanaz/HireDot2.git`
+    - 👯 Clone this repo to your local machine using `https://github.com/utsavmajhi/Book_Sharing`
 
 ### Step 2
 
@@ -128,7 +111,7 @@ $ bower install
 
 ### Step 3
 
-- 🔃 Create a new pull request using <a href="https://github.com/joanaz/HireDot2/compare/" target="_blank">`https://github.com/joanaz/HireDot2/compare/`</a>.
+- 🔃 Create a new pull request using <a href="https://github.com/utsavmajhi/Book_Sharing/compare/" target="_blank">`https://github.com/utsavmajhi/Book_Sharing/compare/`</a>.
 
 ---
 
@@ -157,17 +140,8 @@ $ bower install
 
 Reach out to me at one of the following places!
 
-- Website at <a href="http://fvcproductions.com" target="_blank">`fvcproductions.com`</a>
-- Twitter at <a href="http://twitter.com/fvcproductions" target="_blank">`@fvcproductions`</a>
-- Insert more social links here.
-
----
-
-## Donations (Optional)
-
-- You could include a <a href="https://cdn.rawgit.com/gratipay/gratipay-badge/2.3.0/dist/gratipay.png" target="_blank">Gratipay</a> link as well.
-
-[![Support via Gratipay](https://cdn.rawgit.com/gratipay/gratipay-badge/2.3.0/dist/gratipay.png)](https://gratipay.com/fvcproductions/)
+- Linkedin at<a href="https://www.linkedin.com/in/utsav-majhi/" target="_blank"></a>
+- Facebook at <a href="https://www.facebook.com/utsav.majhi.3" target="_blank"></a>
 
 
 ---
