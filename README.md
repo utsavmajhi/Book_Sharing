@@ -14,13 +14,9 @@ In this project,we are trying to build a decentralized platform for students to 
 [![Build Status](http://img.shields.io/travis/badges/badgerbadgerbadger.svg?style=flat-square)](https://travis-ci.org/badges/badgerbadgerbadger) [![Dependency Status](http://img.shields.io/gemnasium/badges/badgerbadgerbadger.svg?style=flat-square)](https://gemnasium.com/badges/badgerbadgerbadger) [![Coverage Status](http://img.shields.io/coveralls/badges/badgerbadgerbadger.svg?style=flat-square)](https://coveralls.io/r/badges/badgerbadgerbadger) [![Code Climate](http://img.shields.io/codeclimate/github/badges/badgerbadgerbadger.svg?style=flat-square)](https://github.com/utsavmajhi/Book_Sharing/issues) [![Github Issues](http://githubbadges.herokuapp.com/badges/badgerbadgerbadger/issues.svg?style=flat-square)](https://github.com/utsavmajhi/Book_Sharing/issues) [![Pending Pull-Requests](http://githubbadges.herokuapp.com/badges/badgerbadgerbadger/pulls.svg?style=flat-square)](https://github.com/badges/badgerbadgerbadger/pulls)[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org) [![Badges](http://img.shields.io/:badges-9/9-ff6799.svg?style=flat-square)](https://github.com/badges/badgerbadgerbadger)
 
 
-|<img src="https://github.com/utsavmajhi/Book_Sharing/blob/master/pics/3.jpg" width="220" height="400" title="LoginPage" alt="LoginPage"></a>|<img src="https://github.com/utsavmajhi/Book_Sharing/blob/master/pics/1.jpg" width="220" height="400" title="RegisterPage" alt="RegisterPage"></a>|<img src="https://github.com/utsavmajhi/Book_Sharing/blob/master/pics/7.jpg" width="220" height="400" title="BookdetailsPage" alt="BookDetails"></a>|<img src="https://github.com/utsavmajhi/Book_Sharing/blob/master/pics/8.jpg" width="220" height="400" title="ProfilePage" alt="Profile"></a>
-
-
-- Most people will glance at your `README`, *maybe* star it, and leave
-- Ergo, people should understand instantly what your project is about based on your repo
-
-
+|<img src="https://github.com/utsavmajhi/Book_Sharing/blob/master/pics/3.jpg" width="220" height="400" title="LoginPage" alt="LoginPage"></a>|<img src="https://github.com/utsavmajhi/Book_Sharing/blob/master/pics/1.jpg" width="220" height="400" title="RegisterPage" alt="RegisterPage"></a>|<img src="https://github.com/utsavmajhi/Book_Sharing/blob/master/pics/7.jpg" width="220" height="400" title="BookdetailsPage" alt="BookDetails"></a>|<img src="https://github.com/utsavmajhi/Book_Sharing/blob/master/pics/8.jpg" width="220" height="400" title="ProfilePage" alt="Profile"></a>|<img src="https://github.com/utsavmajhi/Book_Sharing/blob/master/pics/5.jpg" width="220" height="400" title="MyBooks" alt="MyBooks"></a>
+-
+-
 ## Table of Contents (Optional)
 
 > If your `README` has a lot of info, section headers might be nice.
