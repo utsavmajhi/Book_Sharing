@@ -1,5 +1,4 @@
 # Book_Sharing
-Book Sharing platform
 <a href="http://fvcproductions.com"><img src="https://avatars1.githubusercontent.com/u/4284691?v=3&s=200" title="FVCproductions" alt="FVCproductions"></a>
 
 <!-- [![FVCproductions](https://avatars1.githubusercontent.com/u/4284691?v=3&s=200)](http://fvcproductions.com) -->
@@ -8,11 +7,9 @@ Book Sharing platform
 
 # Repository Title Goes Here
 
-> Subtitle or Short Description Goes Here
-
-> ideally one sentence
-
-> include terms/tags that can be searched
+> As most of us know that hard-copy books are very costly and 
+in college,there is always some student who has a certain book that is needed by another student.
+In this project,we are trying to build a decentralized platform for students to share their books
 
 **Badges will go here**
 
