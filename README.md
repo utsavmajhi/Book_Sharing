@@ -129,19 +129,12 @@ $ bower install
 
 ---
 
-## FAQ
-
-- **How do I do *specifically* so and so?**
-    - No problem! Just do this.
-
----
-
 ## Support
 
 Reach out to me at one of the following places!
 
-- Linkedin at<a href="https://www.linkedin.com/in/utsav-majhi/" target="_blank"></a>
-- Facebook at <a href="https://www.facebook.com/utsav.majhi.3" target="_blank"></a>
+- Linkedin at<a href="https://www.linkedin.com/in/utsav-majhi/" target="_blank">`Link`</a>
+- Facebook at <a href="https://www.facebook.com/utsav.majhi.3" target="_blank">`Link`</a>
 
 
 ---
