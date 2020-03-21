@@ -101,7 +101,6 @@ $ bower install
 
 ---
 
-## Features
 ## Usage (Optional)
 ## Documentation (Optional)
 ## Tests (Optional)
