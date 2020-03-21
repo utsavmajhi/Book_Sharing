@@ -117,9 +117,9 @@ $ bower install
 
 ## Contributors
 
-| <a href="https://github.com/Zzocker" target="_blank">**Pritam Singh**</a> | <a href="https://github.com/utsavmajhi" target="_blank">**Utsav Majhi**</a> | <a href="http://fvcproductions.com" target="_blank">**FVCproductions**</a> |
-| :---: |:---:| :---:|
-| [![Pritam Singh](https://avatars1.githubusercontent.com/u/43764373?s=200&u=6a3ef280e24c5ffe3b5e108338e028ca4e0745e4&v=4)](https://github.com/Zzocker)    | [![Utsav Majhi](https://avatars1.githubusercontent.com/u/43748319?s=200&u=ac58aeeb7a30b09265baac08d6ef78aab4887aae&v=4)](https://github.com/utsavmajhi) | [![FVCproductions](https://avatars1.githubusercontent.com/u/4284691?v=3&s=200)](http://fvcproductions.com)  |
+| <a href="https://github.com/Zzocker" target="_blank">**Pritam Singh**</a> | <a href="https://github.com/utsavmajhi" target="_blank">**Utsav Majhi**</a> | 
+| :---: |:---:|
+| [![Pritam Singh](https://avatars1.githubusercontent.com/u/43764373?s=200&u=6a3ef280e24c5ffe3b5e108338e028ca4e0745e4&v=4)](https://github.com/Zzocker)    | [![Utsav Majhi](https://avatars1.githubusercontent.com/u/43748319?s=200&u=ac58aeeb7a30b09265baac08d6ef78aab4887aae&v=4)](https://github.com/utsavmajhi) |
 
 ---
 
