@@ -121,7 +121,7 @@ $ bower install
 
 | <a href="http://fvcproductions.com" target="_blank">**FVCproductions**</a> | <a href="http://fvcproductions.com" target="_blank">**FVCproductions**</a> | <a href="http://fvcproductions.com" target="_blank">**FVCproductions**</a> |
 | :---: |:---:| :---:|
-| [![Pritam Singh](https://avatars1.githubusercontent.com/u/43764373?s=400&u=6a3ef280e24c5ffe3b5e108338e028ca4e0745e4&v=4?s=200)](http://fvcproductions.com)    | [![Pritam Singh](https://avatars1.githubusercontent.com/u/4284691?v=3&s=200)](http://fvcproductions.com) | [![FVCproductions](https://avatars1.githubusercontent.com/u/4284691?v=3&s=200)](http://fvcproductions.com)  |
+| [![Pritam Singh](https://avatars1.githubusercontent.com/u/43764373?s=400&u=6a3ef280e24c5ffe3b5e108338e028ca4e0745e4&v=4?s=100)](http://fvcproductions.com)    | [![Pritam Singh](https://avatars1.githubusercontent.com/u/4284691?v=3&s=200)](http://fvcproductions.com) | [![FVCproductions](https://avatars1.githubusercontent.com/u/4284691?v=3&s=200)](http://fvcproductions.com)  |
 | <a href="http://github.com/fvcproductions" target="_blank">`github.com/fvcproductions`</a> | <a href="http://github.com/fvcproductions" target="_blank">`github.com/fvcproductions`</a> | <a href="http://github.com/fvcproductions" target="_blank">`github.com/fvcproductions`</a> |
 
 - You can just grab their GitHub profile image URL
