@@ -6,8 +6,12 @@
 > As most of us know that hard-copy books are very costly and 
 in college,there is always some student who has a certain book that is needed by another student.
 In this project,we are trying to build a decentralized platform for students to share their books
+## Features
+1. owner of book can track his/her book in realtime.
+2. Books will be secured using the fabric network.
+3. The owner can remove his/her book from the platform.
 
-[![Build Status](http://img.shields.io/travis/badges/badgerbadgerbadger.svg?style=flat-square)](https://travis-ci.org/badges/badgerbadgerbadger) [![Dependency Status](http://img.shields.io/gemnasium/badges/badgerbadgerbadger.svg?style=flat-square)](https://gemnasium.com/badges/badgerbadgerbadger) [![Coverage Status](http://img.shields.io/coveralls/badges/badgerbadgerbadger.svg?style=flat-square)](https://coveralls.io/r/badges/badgerbadgerbadger) [![Code Climate](http://img.shields.io/codeclimate/github/badges/badgerbadgerbadger.svg?style=flat-square)](https://github.com/utsavmajhi/Book_Sharing/issues) [![Github Issues](http://githubbadges.herokuapp.com/badges/badgerbadgerbadger/issues.svg?style=flat-square)](https://github.com/utsavmajhi/Book_Sharing/pulls) [![Pending Pull-Requests](http://githubbadges.herokuapp.com/badges/badgerbadgerbadger/pulls.svg?style=flat-square)](https://github.com/badges/badgerbadgerbadger/pulls)[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org) [![Badges](http://img.shields.io/:badges-9/9-ff6799.svg?style=flat-square)](https://github.com/badges/badgerbadgerbadger)
+[![Build Status](http://img.shields.io/travis/badges/badgerbadgerbadger.svg?style=flat-square)](https://travis-ci.org/badges/badgerbadgerbadger) [![Dependency Status](http://img.shields.io/gemnasium/badges/badgerbadgerbadger.svg?style=flat-square)](https://gemnasium.com/badges/badgerbadgerbadger) [![Coverage Status](http://img.shields.io/coveralls/badges/badgerbadgerbadger.svg?style=flat-square)](https://coveralls.io/r/badges/badgerbadgerbadger) [![Code Climate](http://img.shields.io/codeclimate/github/badges/badgerbadgerbadger.svg?style=flat-square)](https://github.com/utsavmajhi/Book_Sharing/issues) [![Github Issues](http://githubbadges.herokuapp.com/badges/badgerbadgerbadger/issues.svg?style=flat-square)](https://github.com/utsavmajhi/Book_Sharing/issues) [![Pending Pull-Requests](http://githubbadges.herokuapp.com/badges/badgerbadgerbadger/pulls.svg?style=flat-square)](https://github.com/badges/badgerbadgerbadger/pulls)[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org) [![Badges](http://img.shields.io/:badges-9/9-ff6799.svg?style=flat-square)](https://github.com/badges/badgerbadgerbadger)
 
 
 [![INSERT YOUR GRAPHIC HERE](http://i.imgur.com/dt8AUb6.png)]()
@@ -15,26 +19,6 @@ In this project,we are trying to build a decentralized platform for students to 
 - Most people will glance at your `README`, *maybe* star it, and leave
 - Ergo, people should understand instantly what your project is about based on your repo
 
-> Tips
-
-- HAVE WHITE SPACE
-- MAKE IT PRETTY
-- GIFS ARE REALLY COOL
-
-> GIF Tools
-
-- Use <a href="http://recordit.co/" target="_blank">**Recordit**</a> to create quicks screencasts of your desktop and export them as `GIF`s.
-- For terminal sessions, there's <a href="https://github.com/chjj/ttystudio" target="_blank">**ttystudio**</a> which also supports exporting `GIF`s.
-
-**Recordit**
-
-![Recordit GIF](http://g.recordit.co/iLN6A0vSD8.gif)
-
-**ttystudio**
-
-![ttystudio GIF](https://raw.githubusercontent.com/chjj/ttystudio/master/img/example.gif)
-
----
 
 ## Table of Contents (Optional)
 
@@ -67,13 +51,33 @@ let generateProject = project => {
 ---
 
 ## Installation
-
-- All the `code` required to get started
-- Images of what it should look like
-
 ### Clone
 
-- Clone this repo to your local machine using `https://github.com/fvcproductions/SOMEREPO`
+- Clone this repo to your local machine using `https://github.com/utsavmajhi/Book_Sharing`
+
+# Start The network
+## Generate the channel artifacts and crypto files (Optional)
+        cryptogen generate --config=./crypto-config.yaml 
+        configtxgen -profile Genesis -outputBlock channel-artifacts/genesis.block -channelID genesis 
+        configtxgen -outputCreateChannelTx channel-artifacts/channel.tx -profile BookChannel -channelID bookchannel 
+        configtxgen -outputAnchorPeersUpdate channel-artifacts/HostAnchorUPdate.tx -profile BookChannel -channelID bookchannel -asOrg Host
+## Start Docker Containers and setup the peers
+1. Change the *-cert.pem to ``cert.pem`` in ca folder of peerOrganizations , and private key to ```PRIVATE_KEY```
+2.      cd blockchain/network/dockerblockchain
+        docker-compose up -d
+3.      docker exec -it cli bash
+        cd /channel-artifacts
+        peer channel create -f channel.tx -o orderer:7050 -c bookchannel
+        peer channel join -b bookchannel.block
+        peer channel update -f HostAnchorUPdate.tx -o orderer:7050 -c bookchannel
+        peer chaincode install -n book -v 0 -p chaincode
+        peer chaincode instantiate -n book -v 0 -C bookchannel -c '{"args":[]}'
+
+## Fire up the AIPs
+1. cd blockchain/app/
+2.      node ./client/enrollAdmin.js
+        node ./client/clientRegister.js
+3.      nodemon ./testapi/api.js
 
 ### Setup
 
