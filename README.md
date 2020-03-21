@@ -17,15 +17,12 @@ In this project,we are trying to build a decentralized platform for students to 
 |<img src="https://github.com/utsavmajhi/Book_Sharing/blob/master/pics/3.jpg" width="220" height="400" title="LoginPage" alt="LoginPage"></a>|<img src="https://github.com/utsavmajhi/Book_Sharing/blob/master/pics/1.jpg" width="220" height="400" title="RegisterPage" alt="RegisterPage"></a>|<img src="https://github.com/utsavmajhi/Book_Sharing/blob/master/pics/7.jpg" width="220" height="400" title="BookdetailsPage" alt="BookDetails"></a>|<img src="https://github.com/utsavmajhi/Book_Sharing/blob/master/pics/8.jpg" width="220" height="400" title="ProfilePage" alt="Profile"></a>|<img src="https://github.com/utsavmajhi/Book_Sharing/blob/master/pics/5.jpg" width="220" height="400" title="MyBooks" alt="MyBooks"></a>
 -
 -
-## Table of Contents (Optional)
-
-> If your `README` has a lot of info, section headers might be nice.
+## Table of Contents
 
 - [Installation](#installation)
 - [Features](#features)
 - [Contributing](#contributing)
 - [Team](#team)
-- [FAQ](#faq)
 - [Support](#support)
 - [License](#license)
 
