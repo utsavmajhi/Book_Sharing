@@ -1,4 +1,4 @@
-<img src="https://avatars1.githubusercontent.com/u/4284691?v=3&s=200" title="BookSharing" alt="Platform"></a>
+<img src="https://github.com/utsavmajhi/Book_Sharing/blob/master/app/src/main/res/drawable-v24/bookp1.png" title="BookSharing" alt="Platform"></a>
 
 <!-- [![FVCproductions](https://avatars1.githubusercontent.com/u/4284691?v=3&s=200)](http://fvcproductions.com) -->
 
